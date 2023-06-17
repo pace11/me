@@ -8,6 +8,7 @@ import {
   Route,
 } from 'react-router-dom'
 
+// app comp
 export default function App() {
   return (
     <>
