@@ -35,7 +35,8 @@ export default ({
   subheading = 'Hi !!',
   heading = (
     <>
-      My name is <span tw="text-primary-500">Muhammad Iriansyah</span>
+      My name is{' '}
+      <span tw="text-primary-500">Muhammad Iriansyah P Pratama</span>
     </>
   ),
   description = `I'am a Software Engineer Frontend from Jayapura, Eastern Indonesia 🇮🇩`,
