@@ -13,7 +13,7 @@ const Heading = tw(SectionHeading)`w-full`
 const VerticalSpacer = tw.div`mt-10 w-full`
 
 const Column = styled.div`
-  ${tw`flex w-full mb-5`}
+  ${tw`flex w-full mb-6`}
 `
 
 const Card = styled.div`
@@ -31,6 +31,8 @@ const Card = styled.div`
 const JobDescBox = tw.span`leading-relaxed mt-1 sm:mt-4 font-medium text-secondary-100 leading-loose`
 const JobDesc = tw.span`block`
 const JobStatus = tw.span`text-sm block text-gray-500`
+const JobSkillBox = tw.div`flex flex-wrap`
+const JobSkillList = tw.div`text-primary-300 text-xs border-2 border-gray-400 pr-1 pl-1 rounded mr-1 mb-1`
 
 export default ({ items = [], heading = 'Experience' }) => {
   return (
@@ -43,11 +45,16 @@ export default ({ items = [], heading = 'Experience' }) => {
             <Column key={i}>
               <Card>
                 <div className="textContainer">
-                  <span className="title">{el.job_title}</span>
+                  <span className="title">{el?.job_title}</span>
+                  <JobSkillBox>
+                    {el?.job_skill.map((el) => (
+                      <JobSkillList key={el}>{el}</JobSkillList>
+                    ))}
+                  </JobSkillBox>
                   <JobDescBox>
-                    <JobDesc>{el.job_desc}</JobDesc>
+                    <JobDesc>{el?.job_desc}</JobDesc>
                   </JobDescBox>
-                  <JobStatus>{el.job_status}</JobStatus>
+                  <JobStatus>{el?.job_status}</JobStatus>
                 </div>
               </Card>
             </Column>

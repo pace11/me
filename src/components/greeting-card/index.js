@@ -30,13 +30,13 @@ const Heading = tw(
   SectionHeading,
 )`mt-4 font-black text-left text-3xl sm:text-4xl lg:text-5xl text-center md:text-left leading-tight`
 const Description = tw.p`mt-4 text-center md:text-left text-sm md:text-base lg:text-3xl font-medium leading-relaxed text-secondary-100`
+const Name = tw.span`text-primary-500`
 
 export default ({
   subheading = 'Hi !!',
   heading = (
     <>
-      My name is{' '}
-      <span tw="text-primary-500">Muhammad Iriansyah P Pratama</span>
+      My name is <Name>Muhammad Iriansyah</Name>
     </>
   ),
   description = `I'am a Software Engineer Frontend from Jayapura, Eastern Indonesia 🇮🇩`,
