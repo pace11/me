@@ -15,7 +15,7 @@ export default function App() {
       <GlobalStyles />
       <Router>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/me" element={<Home />} />
         </Routes>
       </Router>
     </>
