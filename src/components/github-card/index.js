@@ -62,7 +62,10 @@ export default ({ items = [], headingText = null }) => {
                         width="25px"
                         style={{ borderRadius: '50%' }}
                       />
-                      <UserName href={el?.owner?.html_url}>
+                      <UserName
+                        href={el?.owner?.html_url}
+                        target="_blank"
+                      >
                         {el?.owner?.login}{' '}
                         <RiCheckboxCircleFill
                           style={{
