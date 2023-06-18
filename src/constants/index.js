@@ -7,6 +7,7 @@ module.exports = {
     'simpeg-fe',
     'pace-covid-apps',
     'moviedb-frontend',
+    'me',
     'go-block',
     'go-restful',
   ],

@@ -6,9 +6,10 @@ import { css } from 'styled-components/macro' //eslint-disable-line
 
 import useAnimatedNavToggler from '../../helpers/useAnimatedNavToggler.js'
 
-import logo from '../../images/logo.svg'
+import logo from '../../images/logo-11.svg'
 import { ReactComponent as MenuIcon } from 'feather-icons/dist/icons/menu.svg'
 import { ReactComponent as CloseIcon } from 'feather-icons/dist/icons/x.svg'
+import { RiLinkedinBoxFill } from 'react-icons/ri'
 
 const Header = tw.header`
   flex justify-between items-center
@@ -28,7 +29,7 @@ export const NavLink = tw.a`
 
 export const PrimaryLink = tw(NavLink)`
   lg:mx-0
-  px-8 py-3 rounded bg-primary-500 text-gray-100
+  px-3 py-3 rounded text-gray-100
   hocus:bg-primary-700 hocus:text-gray-200 focus:shadow-outline
   border-b-0
 `
@@ -88,9 +89,16 @@ export default ({
       <PrimaryLink
         target="_blank"
         css={roundedHeaderButton && tw`rounded-full`}
+        style={{ backgroundColor: '#0A66C2' }}
         href="https://www.linkedin.com/in/muhammad-iriansyah-putra-pratama-a0120514b/"
       >
-        Contact me in Linkedin
+        Contact me in Linkedin{' '}
+        <RiLinkedinBoxFill
+          size={20}
+          style={{
+            display: 'unset',
+          }}
+        />
       </PrimaryLink>
     </NavLinks>,
   ]
@@ -101,9 +109,9 @@ export default ({
     collapseBreakPointCssMap[collapseBreakpointClass]
 
   const defaultLogoLink = (
-    <LogoLink href="/">
+    <LogoLink href="/me">
+      PACE
       <img src={logo} alt="logo" />
-      Treact
     </LogoLink>
   )
 
